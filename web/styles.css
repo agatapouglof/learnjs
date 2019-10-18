@@ -1,0 +1,15 @@
+img{
+    width: 400px;
+}
+
+.floatleft{
+    float: left;
+}
+
+.clearboth{
+    clear : both;
+}
+
+.panier:hover{
+    cursor: pointer;
+}
