@@ -30,16 +30,38 @@ function genererPanierAleatoire (){
 function validerPoidsCerises(){
     var poidsCerises = document.querySelector("#poidscerises").value;
     var prixCerises = document.querySelector("#prixcerises").value;
-    console.log(" poids cerises " + poidsCerises);
-    console.log(" poids cerises " + prixCerises);
+
+    var vraiPoidsCerises = calculPoidsFruits(panier.cerises);
+    var vraiPrixCerises = calculPrixFruits(panier.cerises);
+
+    var sectionResultat = document.querySelector(".resultatCerises");
+
+    if((vraiPoidsCerises == poidsCerises) && (vraiPrixCerises == prixCerises) ) {
+        sectionResultat.innerHTML = "<img src ='./images/check.png' width='10' />";
+    }else{
+        sectionResultat.innerHTML = "Mauvaise reponse";
+    }
+
 }
 
 
 function validerPoidsFraises(){
     var poidsFraises = document.querySelector("#poidsfraises").value;
     var prixFraises = document.querySelector("#prixfraises").value;
-    console.log(" poids fraises " + poidsFraises);
-    console.log(" poids fraises " + prixFraises);
+
+    var vraiPoidsFraises = calculPoidsFruits(panier.fraises);
+    var vraiPrixFraises = calculPrixFruits(panier.fraises);
+
+    var sectionResultat = document.querySelector(".resultatFraises");
+
+
+    if((vraiPoidsFraises == poidsFraises) && (vraiPrixFraises == prixFraises) ) {
+        sectionResultat.innerHTML = "<img src ='./images/check.png' width='10' />";
+
+    }else{
+        sectionResultat.innerHTML = "Mauvaise reponse";
+
+    }
 }
 
 function genererListeCerises(){
@@ -55,7 +77,7 @@ function genererListeFraises(){
 function genererListe(fruit){
     var listHtml = "";
     panier[fruit].forEach(function(elt,index){
-        listHtml += "<li>"+ elt.nom  + " "+ (index+1) + "</li>"
+        listHtml += "<li>" + (index+1) + " Poids "+ elt.poids  + " -  Prix "+ elt.prix  + "</li>"
     });
     return listHtml
 }
@@ -71,3 +93,18 @@ panierImage.addEventListener("click", function(){
     panier =  genererPanierAleatoire();
     generationListe();
 });
+
+
+function calculPoidsFruits(fruits){
+    var totalPoids = fruits.reduce(function(acc,val){
+        return acc + val.poids; 
+    },0);
+    return totalPoids;
+}
+
+function calculPrixFruits(fruits){
+    var totalPrix = fruits.reduce(function(acc,val){
+        return acc + val.prix; 
+    },0);
+    return totalPrix;
+}

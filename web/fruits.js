@@ -6,7 +6,7 @@ var fruitTemplate  = {
         var cerises = {
             nom : "cerises",
             poids : toolbox.randomNumber(1,11),
-            prix : 40 
+            prix : toolbox.randomNumber(20,40), 
         }
         return cerises;
     },
@@ -15,7 +15,7 @@ var fruitTemplate  = {
         var fraises = {
             nom : "fraises",
             poids : toolbox.randomNumber(1,11),
-            prix : 20
+            prix : toolbox.randomNumber(20,40),
         }
     
         return fraises;
