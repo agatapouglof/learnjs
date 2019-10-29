@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Ventes de fruits </h1>
+    <section class="floatleft">
+        <img src="panier.jpg" alt="" class="panier">
+    </section>
+
+    <section class="floatleft">
+        <div class="cerises">    
+            <img src="cerises.jpg" alt=""  height="300" class="floatleft">
+            <ul class="floatleft">
+                {cerises}
+            </ul>
+            <div class="floatleft paddingleft">
+                <form action="#" method="POST">
+                <div class="floatleft">
+                    <label for="poidscerises"> Poids Total de Cerises </label>
+                    <input type="number" name="poidscerises" id="poidscerises">
+                </div>
+                <div class="floatleft">
+                    <label for="prixcerises"> Prix Total de Cerises </label>
+                    <input type="number" name="prixcerises" id="prixcerises">
+                </div>
+                <!-- <button onclick="validerPoidsCerises()">Valider</button> -->
+                <input type="submit" value="Valider Cerises">
+            </form>
+            </div>
+            <div class="floatleft resultatCerises">  {cerisesResultat} </div>
+        </div>
+        <div class="clearboth"></div>
+        <div class="fraises">
+            <img src="fraises.jpg" alt=""  height="300" class="floatleft">
+            <ul class="floatleft">
+                {fraises}
+            </ul>
+            <div class="floatleft paddingleft">
+                <form action="#" method="POST">
+                    <div class="floatleft">
+                        <label for="poidsfraises"> Poids Total de Fraises </label>
+                        <input type="number" name="poidsfraises" id="poidsfraises">
+                    </div>
+                    <div class="floatleft">
+                        <label for="prixfraises"> Prix Total de Fraises </label>
+                        <input type="number" name="prixfraises" id="prixfraises">
+                    </div>
+                    <input type="submit" value="Valider">
+                </form>
+            </div>
+            <div class="floatleft resultatFraises"> {fraisesResultat} </div>
+        </div>
+    </section>
+
+
+
+</body>
+<!-- <script src="fruits.js"></script>
+<script src="toolsbox.js"></script>
+<script src="app.js"></script> -->
+</html>

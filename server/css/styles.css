@@ -1,0 +1,22 @@
+img{
+    width: 300px;
+}
+
+.floatleft{
+    float: left;
+}
+
+.clearboth{
+    clear : both;
+}
+
+.panier:hover{
+    cursor: pointer;
+}
+
+.resultatCerises  > img{
+    width: 40px;
+}
+.resultatFraises > img{
+    width: 40px;
+}

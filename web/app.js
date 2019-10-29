@@ -1,5 +1,5 @@
-// var fruitTemplate = require("./fruits");
-// var toolbox = require("./toolsbox");
+var fruitTemplate = require("./fruits");
+var toolbox = require("./toolsbox");
 
 var panier =  genererPanierAleatoire();
 generationListe();
